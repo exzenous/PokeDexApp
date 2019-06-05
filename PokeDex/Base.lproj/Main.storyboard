@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F4R-Dk-UAl">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Main View" id="BYZ-38-t0r" customClass="MainViewController" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="05Z-Mp-OaK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TZf-zX-FUq">
+                                    <size key="itemSize" width="102" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokemonListCollectionViewCell" id="kxU-5O-r0o" customClass="PokemonListCollectionViewCell" customModule="PokeDex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Voc-rA-PD5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="75"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4R-Cj-piC">
+                                                    <rect key="frame" x="2" y="77" width="98" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Z4R-Cj-piC" secondAttribute="trailing" constant="2" id="55i-RY-DHp"/>
+                                            <constraint firstItem="Z4R-Cj-piC" firstAttribute="top" secondItem="Voc-rA-PD5" secondAttribute="bottom" constant="2" id="FTP-X6-5wc"/>
+                                            <constraint firstItem="Voc-rA-PD5" firstAttribute="leading" secondItem="kxU-5O-r0o" secondAttribute="leading" id="SEG-j1-CLE"/>
+                                            <constraint firstItem="Voc-rA-PD5" firstAttribute="top" secondItem="kxU-5O-r0o" secondAttribute="top" id="UoG-Sw-Xce"/>
+                                            <constraint firstAttribute="bottom" secondItem="Voc-rA-PD5" secondAttribute="bottom" constant="25" id="fSh-Gi-oqU"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z4R-Cj-piC" secondAttribute="bottom" constant="2" id="jgO-pX-jS0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Voc-rA-PD5" secondAttribute="trailing" id="yMz-qO-g8F"/>
+                                            <constraint firstItem="Z4R-Cj-piC" firstAttribute="leading" secondItem="kxU-5O-r0o" secondAttribute="leading" constant="2" id="yQr-L5-R76"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="pokemonImage" destination="Voc-rA-PD5" id="xRj-jl-x7f"/>
+                                            <outlet property="pokemonName" destination="Z4R-Cj-piC" id="KE5-r4-IHN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="05Z-Mp-OaK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BPy-dc-Nwj"/>
+                            <constraint firstItem="05Z-Mp-OaK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FGQ-cK-XU6"/>
+                            <constraint firstItem="05Z-Mp-OaK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lcI-6X-gFw"/>
+                            <constraint firstItem="05Z-Mp-OaK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zbz-60-ivr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PokéDex" id="5oi-nl-A9s">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="search" id="r3t-As-tgi">
+                            <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="VM5-hV-gXg">
+                            <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="tappedRefreshList:" destination="BYZ-38-t0r" id="9M7-Zf-OGC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pokemonCollectView" destination="05Z-Mp-OaK" id="aFS-pS-jdj"/>
+                        <outlet property="refreshButton" destination="VM5-hV-gXg" id="heI-Ql-Gbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.25" y="133.09859154929578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lgx-ac-ueH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4R-Dk-UAl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Mtg-ze-rmy">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="25"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="40"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="edj-VM-hEM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtN-Yc-dww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="133"/>
+        </scene>
+    </scenes>
+</document>
