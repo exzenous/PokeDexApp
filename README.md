@@ -1,2 +1,2 @@
 # PokeDex App
-
+A Detail
